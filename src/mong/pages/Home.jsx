@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Container from '../components/Container.jsx'
 
 export default function Home() {
@@ -37,13 +38,32 @@ export default function Home() {
             ))}
           </div>
 
-          <button style={{ backgroundColor: '#00d4aa', color: '#000', border: 'none', borderRadius: 8, height: 48, padding: '0 24px', marginTop: 24, cursor: 'pointer', fontSize: 18, fontWeight: 500 }}>
+          <Link 
+            to="/signup"
+            style={{ 
+              backgroundColor: '#00d4aa', 
+              color: '#000', 
+              border: 'none', 
+              borderRadius: 8, 
+              height: 48, 
+              padding: '0 24px', 
+              marginTop: 24, 
+              cursor: 'pointer', 
+              fontSize: 18, 
+              fontWeight: 500,
+              textDecoration: 'none',
+              display: 'inline-block',
+              lineHeight: '48px'
+            }}
+            onMouseOver={(e) => e.target.style.backgroundColor = '#00c4a0'}
+            onMouseOut={(e) => e.target.style.backgroundColor = '#00d4aa'}
+          >
             mong과 함께 시작하기
-          </button>
+          </Link>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 8 }}>
             <span style={{ color: '#a1a1aa', fontSize: 14 }}>이미 계정이 있으신가요?</span>
-            <a href="#login" style={{ color: '#00d4aa', fontSize: 16, fontWeight: 500, textDecoration: 'none' }}>로그인</a>
+            <a href="login" style={{ color: '#00d4aa', fontSize: 16, fontWeight: 500, textDecoration: 'none' }}>로그인</a>
           </div>
 
           <div style={{ width: 448, maxWidth: '100%', marginTop: 24 }}>
