@@ -38,28 +38,54 @@ export default function Home() {
             ))}
           </div>
 
-          <Link 
-            to="/signup"
-            style={{ 
-              backgroundColor: '#00d4aa', 
-              color: '#000', 
-              border: 'none', 
-              borderRadius: 8, 
-              height: 48, 
-              padding: '0 24px', 
-              marginTop: 24, 
-              cursor: 'pointer', 
-              fontSize: 18, 
-              fontWeight: 500,
-              textDecoration: 'none',
-              display: 'inline-block',
-              lineHeight: '48px'
-            }}
-            onMouseOver={(e) => e.target.style.backgroundColor = '#00c4a0'}
-            onMouseOut={(e) => e.target.style.backgroundColor = '#00d4aa'}
-          >
-            mong과 함께 시작하기
-          </Link>
+          <div style={{ display: 'flex', gap: 16, marginTop: 24 }}>
+            <Link 
+              to="/signup"
+              style={{ 
+                backgroundColor: '#00d4aa', 
+                color: '#000', 
+                border: 'none', 
+                borderRadius: 8, 
+                height: 48, 
+                padding: '0 24px', 
+                cursor: 'pointer', 
+                fontSize: 18, 
+                fontWeight: 500,
+                textDecoration: 'none',
+                display: 'inline-block',
+                lineHeight: '48px'
+              }}
+              onMouseOver={(e) => e.target.style.backgroundColor = '#00c4a0'}
+              onMouseOut={(e) => e.target.style.backgroundColor = '#00d4aa'}
+            >
+              mong과 함께 시작하기
+            </Link>
+            <Link 
+              to="/dashboard"
+              style={{ 
+                backgroundColor: 'transparent', 
+                color: '#00d4aa', 
+                border: '1px solid #00d4aa', 
+                borderRadius: 8, 
+                height: 48, 
+                padding: '0 24px', 
+                cursor: 'pointer', 
+                fontSize: 18, 
+                fontWeight: 500,
+                textDecoration: 'none',
+                display: 'inline-block',
+                lineHeight: '48px'
+              }}
+              onMouseOver={(e) => {
+                e.target.style.backgroundColor = 'rgba(0, 212, 170, 0.1)'
+              }}
+              onMouseOut={(e) => {
+                e.target.style.backgroundColor = 'transparent'
+              }}
+            >
+              대시보드 보기
+            </Link>
+          </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: 8, marginTop: 8 }}>
             <span style={{ color: '#a1a1aa', fontSize: 14 }}>이미 계정이 있으신가요?</span>
